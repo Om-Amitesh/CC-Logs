@@ -1,0 +1,36 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh14460\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs58 \cf0 Containers\
+
+\fs40 \
+What is a container?\
+	Containers are packages of software that contain all of the necessary elements to run in any environment	Containers DO NOT have their own OSes.\
+	Containers - LXC uses linux kernels cgroups and namespaces to isolate different containers.\
+	What\'92s different from a VM?\
+		VMs virtualise hardware resources, Containers virtualise software resources.\
+\
+Why tf did I start building containers, when I had VMs that did the task already?\
+	Isolation achieved by VMs is costly.\
+	Things like VMMigration that we learnt earlier, is super costly and even has a risk of failure\
+	We really need to think of lightweight methods to support isolated resources over a resource pool.\
+	Management of multiple OSes over hardware is hard, using a unified kernel for multiple isolated environments seems more of a logical solution if you think about it.\
+	Since containers are not specific to OSes, rather specific to their container engine, you can deploy it elsewhere with a MUCH lower overhead.\
+\
+How are we gonna manage containers? what makes this work?\
+Enter : Docker.\
+\
+
+\fs54 Docker:\
+
+\fs40 	Docker is an open source containerisation platform that lets you package applications to containers.\
+	You can say this is a container engine, that makes this work.\
+	It can help you create, test, ship and deploy containers too.\
+	It can be looked at as a PaaS product that lets you have OS level virtualisation to deliver S/W packages\
+	OS level virtualisation lets you have multiple user spaces over a single OS.\
+	\
+}
