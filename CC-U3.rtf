@@ -1,0 +1,45 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh13840\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs66 \cf0 Storage \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs42 \cf0 \
+File Storage is organising and representing data as a hierarchy of folders. Similar to what we have on our systems rn.\
+The problem with this is that it isn\'92t scalable. Why? Well if you exhaust your SSD rn, you can\'92t really do anything unless you buy a new SSD, it is limited.\
+\
+Block Storage: this is like file storage systems but you store \'91blocks\'92 or chunks of each file on a distributed network. Does it have a higher throughput? Yes. Blocks distributed over different machines/disks can have multiple spindles/readers working on a single file. Making it super fast for retrieval compared to the file storage system. it however isn\'92t scalable too, sadly, an example for this is HDFS.\
+\
+Object Storage: Here, over your traditional FS layer, you have an object-storage-services layer on top, this makes a unified way of storage across various disk formats. This makes storage in such a way, that installing a new HDD/SSD will still use the objectifying(hehe) layer on top, making things unified and easily scalable.\
+\
+While studying about cloud storage we aim to study what\'92s going on behind the scenes in an application like, drive or so.\
+We aim to see how a ubiquitous, reliable and on demand storage is possible on remote servers ~ this is called storage virtualisation.\
+\
+Cloud storage can be seen as a virtual storage pool. \
+Examples: Object stores : S3, Openstack swift , Azure storage.\
+\
+How does cloud storage communication even happen?\
+	> End point devices like workstations or mobile phones communicate via a client application.\
+	> The first point of contact is a representation server that\'92s sorta a proxy for the actual server that hosts the application\
+	> The application server hosts the logical FS layer and works on resolving the objects/blocks \
+	> \
+\
+Layers of Cloud storage:\
+	> User access layer - the client application\
+	> Data service layer - this deals with the users and manages multi user data sharing and so on\
+	> Data management - works on user management, security, replica management and so on.\
+	> Data storage - storage devices over a WAN managing your data\
+\
+Consequences of using Cloud storage:\
+	> Dramatic reduction in total cost of ownership:\
+		Its much cheaper to buy storage from google than get a seagate SSD of 256Gigs\
+	> Unlimited scalability: \
+		easier to add more storage units to your property\
+	> Elasticity:\
+		Dynamic reductions and increases as per resource requirements.\
+	> On demand:\
+		Well, you\'92re using cloud. It\'92s fairly evident that this application/resource is suit-to-client, based on current requirements.}
