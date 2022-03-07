@@ -6,7 +6,37 @@
 \paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh18000\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
-\f0\fs66 \cf0 VM Migration\
+\f0\fs66 \cf0 VMs\
+
+\fs42 Virtualisation in this context is actually making your resource pool appear as separate execution environments for things to run.\
+\
+Why VMs?\
+OS diversity\
+Security and isolation\
+Encapsulating \
+Support load balancing over a cluster/grid\
+\
+Hypervisor/VMM : this is a layer that sits over your hardware and host OS and enables these set of resources to be virtualised. \
+\
+Goals for a VMM:\
+	> Execution environments provided must be as though it is running on a separate/actual machine only\
+	> Despite Emulation it should not show decrease in performance or speed\
+	> It should have complete control over resources to allocate required amounts.\
+\
+Types of VMs:\
+	> Bare metal VMs : These VMs run directly run on hardware without a host OS. the hardware is supposed to support this. This is called Hardware virtualisation.\
+	> Hosted VMs: These VMs would run on top of a Host OS layer. KVMs - Kernel VMs come under this. Kernel VMs enable the host OS also to behave like a hypervisor. This is called OS virtualisation.\
+	> Hybrid VMs? Yeah these are possible, its better to look at a diagram to understand this.
+\fs66 \
+
+\fs42 \
+Types of Virtualisation:\
+	> Full/Transparent Virtualisation: Here the guest OS is not modified and it runs as is on the resources you allot to it, via the hypervisor. VMWare comes here.\
+	> Para-Virtualisation: The guest OSes are modified here to run on your allocated resources. The VMM/hypervisor in this case provides APIs for the guest OS to carry out the right function calls or so. \
+APIs(called hyper-calls) provided by the VMMs here try to resolve the performance issue which occurs by manual binary translation that you\'92d do in full virtualisation. The VMM here does the work of translating the API calls to system calls. Certain commands that are read only can go directly to the host computer though, no need for API call to VMM.\
+
+\fs66 \
+VM Migration\
 
 \fs46 \
 
